@@ -168,7 +168,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
-	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
+	//{ TERMMOD,              XK_Y,         selpaste,       {.i =  0} },
+	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 };
 
@@ -251,8 +252,9 @@ static Key key[] = {
 	{ XK_KP_Insert,     ShiftMask,      "\033[2;2~",    +1,    0},
 	{ XK_KP_Insert,     ShiftMask,      "\033[4l",      -1,    0},
 	{ XK_KP_Insert,     ControlMask,    "\033[L",       -1,    0},
-	{ XK_KP_Insert,     ControlMask,    "\033[2;5~",    +1,    0},
+    { XK_KP_Insert,     ControlMask,    "\033[2;5~",    +1,    0},
 	{ XK_KP_Insert,     XK_ANY_MOD,     "\033[4h",      -1,    0},
+	{ XK_KP_Insert,     XK_ANY_MOD,     "\033[2~",      +1,    0},
 	{ XK_KP_Delete,     ControlMask,    "\033[M",       -1,    0},
 	{ XK_KP_Delete,     ControlMask,    "\033[3;5~",    +1,    0},
 	{ XK_KP_Delete,     ShiftMask,      "\033[2K",      -1,    0},
@@ -320,6 +322,7 @@ static Key key[] = {
 	{ XK_Insert,        ControlMask,    "\033[L",       -1,    0},
 	{ XK_Insert,        ControlMask,    "\033[2;5~",    +1,    0},
 	{ XK_Insert,        XK_ANY_MOD,     "\033[4h",      -1,    0},
+	{ XK_Insert,        XK_ANY_MOD,     "\033[2~",      +1,    0},
 	{ XK_Delete,        ControlMask,    "\033[M",       -1,    0},
 	{ XK_Delete,        ControlMask,    "\033[3;5~",    +1,    0},
 	{ XK_Delete,        ShiftMask,      "\033[2K",      -1,    0},
