@@ -149,8 +149,8 @@ static unsigned int defaultattr = 11;
  */
 static MouseShortcut mshortcuts[] = {
 	/* button               mask            string */
-	{ Button4,              XK_ANY_MOD,     "\031" },
-	{ Button5,              XK_ANY_MOD,     "\005" },
+	/*{ Button4,              XK_ANY_MOD,     "\031" },
+	{ Button5,              XK_ANY_MOD,     "\005" },*/
 };
 
 /* Internal keyboard shortcuts. */
@@ -171,6 +171,7 @@ static Shortcut shortcuts[] = {
 	//{ TERMMOD,              XK_Y,         selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ TERMMOD,             XK_Escape,      keyboard_select, {.i =  0} },
 };
 
 /*
